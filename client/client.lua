@@ -33,10 +33,10 @@ if Debug then
 			local result =
 				exports["sct_presskey_minigame"]:ActionMinigame(
 				{
-					time = 5, -- เวลา timeout ใส่เป็นจำนวนวิ
-					limit = 4, -- กดผิดได้กี่ครั้ง
-					keys = {"A", "B", "C", "D", "Z"}, -- ตัวอักษรที่ให้สุ่ม
-					keysSize = 4 --  จำนวนตัวอักษรที่ต้องกด
+					duration = 5, -- เวลา timeout ใส่เป็นจำนวนวิ
+					maxLimit = 4, -- กดผิดได้กี่ครั้ง
+					keySize = 4, --  จำนวนตัวอักษรที่ต้องกด
+					keyRandom = {"A", "B", "C", "D", "Z"}, -- ตัวอักษรที่ให้สุ่ม
 				}
 			)
 			print(json.encode(result))
@@ -44,3 +44,14 @@ if Debug then
 		false
 	)
 end
+
+
+-- postMessage({
+-- 	action: "ACTION_MINIGAME", data: {
+-- 	  duration: 5,
+-- 	  maxLimit: 4,
+-- 	  keySize: 4,
+-- 	  keyRandom: ['A', 'B', 'C', 'D', 'Z'],
+-- 	}
+--   })
+  

@@ -13,6 +13,10 @@ local result =
     }
 )
 
+keyRandom = {"A", "B", "C", "D", "Z"}, -- ตัวอักษรที่ให้สุ่ม
+keyRandom: {'↑', '↓', '←', '→'} -- ปุ่มให้สุ่ม
+keyRandom: {'A', 'B', '↑', '↓', '←', '→'} -- ปุ่มให้สุ่ม + ตัวอักษรให้สุ่ม
+
 -- ค่าที่ result เป็น { 'result': bool, 'messages': string }
 print(json.encode(result))
 ```
